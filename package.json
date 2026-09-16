@@ -1,0 +1,18 @@
+{
+  "name": "analog-rolodex-contact-management",
+  "version": "1.0.0",
+  "description": "Analog Rolodex & Paper Address Book - Full-stack Contact Management Application built with React, Node.js, Express, and MongoDB.",
+  "scripts": {
+    "install:all": "npm.cmd --prefix server install && npm.cmd --prefix client install",
+    "dev:server": "npm.cmd --prefix server run dev",
+    "dev:client": "npm.cmd --prefix client run dev",
+    "dev": "concurrently \"npm.cmd --prefix server run dev\" \"npm.cmd --prefix client run dev\"",
+    "build:client": "npm.cmd --prefix client run build",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "Antigravity",
+  "license": "ISC"
+}
