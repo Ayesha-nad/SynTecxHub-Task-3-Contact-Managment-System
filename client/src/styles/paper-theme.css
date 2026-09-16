@@ -1,0 +1,388 @@
+/* ==========================================================================
+   PAPER THEME & TACTILE STATIONERY STYLING (MOBILE-FIRST & FULLY RESPONSIVE)
+   ========================================================================== */
+
+/* Ruled Notebook Paper Background */
+.ruled-paper {
+  background-color: var(--bg-card);
+  background-image: 
+    linear-gradient(90deg, transparent 36px, var(--bg-margin-line) 36px, var(--bg-margin-line) 38px, transparent 38px),
+    repeating-linear-gradient(transparent, transparent 25px, var(--bg-ruled-line) 26px);
+  background-size: 100% 100%, 100% 26px;
+}
+
+.ruled-paper-subtle {
+  background-color: var(--bg-card);
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 25px,
+    var(--bg-ruled-line) 26px
+  );
+  background-size: 100% 26px;
+}
+
+/* Manila Card Styling */
+.manila-card {
+  background-color: var(--bg-manila);
+  border: 1px solid rgba(59, 42, 30, 0.12);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+  max-width: 100%;
+}
+
+.manila-card:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Stitched Border (Add/Edit Form Panel) */
+.stitched-border {
+  position: relative;
+  border: 2px dashed rgba(122, 140, 111, 0.6);
+  border-radius: 12px;
+  background-color: var(--bg-parchment-light);
+  box-shadow: 
+    0 0 0 3px var(--bg-parchment-base),
+    0 0 0 5px rgba(59, 42, 30, 0.08),
+    0 10px 24px rgba(59, 42, 30, 0.12);
+  max-width: 100%;
+}
+
+/* Washi Tape Strip */
+.washi-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 80px;
+  max-width: 80%;
+  height: 20px;
+  background: rgba(224, 167, 80, 0.7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 2px dashed rgba(59, 42, 30, 0.2);
+  border-right: 2px dashed rgba(59, 42, 30, 0.2);
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.washi-tape-sage {
+  background: rgba(122, 140, 111, 0.7);
+}
+
+.washi-tape-coral {
+  background: rgba(217, 119, 87, 0.7);
+}
+
+.washi-tape-corner {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  transform: rotate(45deg);
+  width: 48px;
+  height: 16px;
+  background: rgba(224, 167, 80, 0.75);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Wax Seal Avatar */
+.wax-seal {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif-heading);
+  font-weight: 700;
+  font-size: 15px;
+  color: #fffaf0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.25),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.35);
+  position: relative;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.wax-seal-lg {
+  width: 54px;
+  height: 54px;
+  font-size: 20px;
+}
+
+/* Rolodex Slot Cutouts */
+.rolodex-slots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  pointer-events: none;
+}
+
+.rolodex-slot {
+  width: 14px;
+  height: 10px;
+  background-color: var(--bg-parchment-dark);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid rgba(59, 42, 30, 0.15);
+  border-bottom: none;
+  box-shadow: var(--shadow-inset-hole);
+}
+
+/* Brass Desk Star Pin */
+.star-pin {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #d1b476;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.star-pin:hover, .star-pin:active {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.star-pin.active {
+  color: var(--accent-mustard);
+  filter: drop-shadow(0 2px 4px rgba(224, 167, 80, 0.4));
+}
+
+/* Ink-Stamp Button Styles */
+.btn-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  min-height: 38px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 2px solid var(--text-espresso);
+  background-color: var(--bg-parchment-light);
+  color: var(--text-espresso);
+  box-shadow: 2px 2px 0px var(--text-espresso);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background-color 0.15s ease;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.btn-stamp:hover {
+  background-color: #fff;
+  transform: translate(-1px, -1px);
+  box-shadow: 2.5px 2.5px 0px var(--text-espresso);
+}
+
+.btn-stamp:active {
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 0px 0px 0px var(--text-espresso);
+}
+
+.btn-stamp-primary {
+  background-color: var(--accent-sage);
+  color: #fff;
+  border-color: #3e4f35;
+  box-shadow: 2px 2px 0px #3e4f35;
+}
+
+.btn-stamp-primary:hover {
+  background-color: var(--accent-sage-dark);
+  box-shadow: 2.5px 2.5px 0px #3e4f35;
+}
+
+.btn-stamp-coral {
+  background-color: var(--accent-coral);
+  color: #fff;
+  border-color: #8c3218;
+  box-shadow: 2px 2px 0px #8c3218;
+}
+
+.btn-stamp-coral:hover {
+  background-color: var(--accent-coral-dark);
+  box-shadow: 2.5px 2.5px 0px #8c3218;
+}
+
+.btn-stamp-mustard {
+  background-color: var(--accent-mustard);
+  color: var(--text-dark);
+  border-color: #875c17;
+  box-shadow: 2px 2px 0px #875c17;
+}
+
+.btn-stamp-mustard:hover {
+  background-color: var(--accent-mustard-light);
+  box-shadow: 2.5px 2.5px 0px #875c17;
+}
+
+.btn-stamp-sm {
+  padding: 5px 10px;
+  min-height: 32px;
+  font-size: 12px;
+  border-width: 1.5px;
+  box-shadow: 1.5px 1.5px 0px var(--text-espresso);
+}
+
+/* DYMO Label Sticker / Tag Badge */
+.dymo-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-family: var(--font-typewriter);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  background-color: #231810;
+  color: #f7eed7;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+/* Tag Pills styled as Stationery Labels */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1px dashed rgba(59, 42, 30, 0.3);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: var(--text-espresso);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tag-pill:hover, .tag-pill:active {
+  background-color: #fff;
+  border-color: var(--text-espresso);
+}
+
+.tag-pill.tag-Work {
+  background-color: var(--accent-navy-soft);
+  color: #203a55;
+  border-color: rgba(32, 58, 85, 0.3);
+}
+
+.tag-pill.tag-Family {
+  background-color: var(--accent-coral-soft);
+  color: #8c3218;
+  border-color: rgba(140, 50, 24, 0.3);
+}
+
+.tag-pill.tag-Friends {
+  background-color: var(--accent-sage-soft);
+  color: #3b522f;
+  border-color: rgba(59, 82, 47, 0.3);
+}
+
+.tag-pill.tag-VIP {
+  background-color: var(--accent-mustard-soft);
+  color: #784f09;
+  border-color: rgba(120, 79, 9, 0.3);
+}
+
+/* Torn Edge for Delete Modal */
+.torn-paper-modal {
+  position: relative;
+  background: var(--bg-card);
+  border: 2px solid rgba(59, 42, 30, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 15px 35px rgba(35, 24, 16, 0.35);
+  max-width: 100%;
+}
+
+.torn-paper-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accent-coral),
+    var(--accent-coral) 8px,
+    var(--bg-parchment-light) 8px,
+    var(--bg-parchment-light) 16px
+  );
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Red Ink Form Validation */
+.ink-error-input {
+  border-color: var(--accent-coral) !important;
+  background-color: #fff7f5 !important;
+  box-shadow: 0 0 0 1px var(--accent-coral) !important;
+}
+
+.ink-error-msg {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-family: var(--font-handwritten);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-coral-dark);
+}
+
+/* Handwritten notes font class */
+.handwriting {
+  font-family: var(--font-handwritten);
+  font-size: 18px;
+  line-height: 1.35;
+  color: #2b1f16;
+}
+
+/* Typewriter font class */
+.typewriter {
+  font-family: var(--font-typewriter);
+  letter-spacing: 0.02em;
+}
+
+/* Stamped Toast Badge */
+.stamped-toast {
+  background: var(--bg-parchment-light);
+  border: 2px solid var(--text-espresso);
+  box-shadow: 3px 3px 0px var(--text-espresso);
+  border-radius: 6px;
+  padding: 10px 14px;
+  position: relative;
+  overflow: hidden;
+  animation: slideInStamp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  max-width: 100%;
+}
+
+@keyframes slideInStamp {
+  from {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
